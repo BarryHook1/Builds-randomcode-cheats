@@ -1,0 +1,16 @@
+The only thing that needs to be changed is in the bypassInstaller 
+
+if (!bypass_installer->MapDriver("C:\\Users\\walter white\\Desktop\\driverx00.sys", "driverx00.sys"))
+
+^^ just change the path to where the driver is located in my example its located in my desktop
+as you can see from that string 
+
+now just run Bypassinstaller.exe as admin then it will say bypass installed!
+now just run usrx00.exe as admin and join your game (before you do that you need to wait 10 seconds!)
+because battleye might flag you! 
+
+and go  in usrx00 source and change everything to your target game 
+
+important run the installer 1 time per restart.
+
+the installer will map the driver + load the vulnerable driver! and clear some traces

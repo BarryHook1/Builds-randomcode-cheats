@@ -1,0 +1,19 @@
+﻿  main.cpp
+  The contents of <string_view> are available only with C++17 or later.
+  The contents of <filesystem> are available only with C++17 or later.
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(32,41): error C2664: 'HANDLE OpenEventLogW(LPCWSTR,LPCWSTR)': cannot convert argument 2 from 'const char *' to 'LPCWSTR'
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(32,40): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winbase.h(6359,1): message : see declaration of 'OpenEventLogW'
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(119,8): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(119,60): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(119,72): error C3083: 'copy_options': the symbol to the left of a '::' must be a type
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(119,86): error C2039: 'overwrite_existing': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\thread(28): message : see declaration of 'std'
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(119,104): error C2065: 'overwrite_existing': undeclared identifier
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(121,20): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(121,32): error C2039: 'filesystem_error': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\thread(28): message : see declaration of 'std'
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(121,49): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(121,49): error C2143: syntax error: missing ',' before '&'
+C:\Users\jorda\Desktop\driverx00_source\BypassInstaller\BypassInstaller\BypassInstaller.h(124,98): error C2039: 'path1': is not a member of 'std::error_code'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\system_error(114): message : see declaration of 'std::error_code'

@@ -1,0 +1,89 @@
+;
+; driverx00.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Sample ; TODO: edit Class
+ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=driverx00.cat
+DriverVer = 09/01/2020,16.23.5.709
+
+[DestinationDirs]
+DefaultDestDir = 12
+driverx00_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SampleClassReg
+
+[SampleClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+driverx00.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTARM
+
+[Standard.NTARM]
+%driverx00.DeviceDesc%=driverx00_Device, Root\driverx00 ; TODO: edit hw-id
+
+[driverx00_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+driverx00.sys
+
+;-------------- Service installation
+[driverx00_Device.NT.Services]
+AddService = driverx00,%SPSVCINST_ASSOCSERVICE%, driverx00_Service_Inst
+
+; -------------- driverx00 driver install sections
+[driverx00_Service_Inst]
+DisplayName    = %driverx00.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\driverx00.sys
+
+;
+;--- driverx00_Device Coinstaller installation ------
+;
+
+[driverx00_Device.NT.CoInstallers]
+AddReg=driverx00_Device_CoInstaller_AddReg
+CopyFiles=driverx00_Device_CoInstaller_CopyFiles
+
+[driverx00_Device_CoInstaller_AddReg]
+;
+
+
+[driverx00_Device_CoInstaller_CopyFiles]
+;
+
+
+[driverx00_Device.NT.Wdf]
+KmdfService =  driverx00, driverx00_wdfsect
+[driverx00_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+ClassName="Samples" ; TODO: edit ClassName
+DiskName = "driverx00 Installation Disk"
+driverx00.DeviceDesc = "driverx00 Device"
+driverx00.SVCDESC = "driverx00 Service"

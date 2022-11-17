@@ -1,0 +1,7 @@
+﻿  Building 'driverx00' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\driverx00.inf
+  Stamping [Version] section with DriverVer=09/01/2020,16.23.30.835
+C:\Users\jorda\Desktop\driverx00_source\driverx00\driverx00\driverx00.inf(5-5): warning 1324: [Version] section should specify PnpLockdown=1.
+  driverx00.vcxproj -> C:\Users\jorda\Desktop\driverx00_source\driverx00\x64\Release\driverx00.sys
+  Driver is 'Universal'.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\km\wdm.h(43519): warning BK4504: file contains too many references; ignoring further references from this source

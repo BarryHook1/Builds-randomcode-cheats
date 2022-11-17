@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
+      <Extensions>inf;inv;inx;mof;mc;</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{f88ab30a-84c8-4346-a487-159c5a5d4f09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ClearTraces">
+      <UniqueIdentifier>{7fa66cba-5003-4bd0-bcd7-91d114607ecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{3bef95b1-d4c9-4af1-8a7b-249fcdb2d3d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Headers">
+      <UniqueIdentifier>{8b27b66d-2706-4e47-96be-ce731e203640}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="driverx00.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="entrypoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\MemoryFunctions.cpp">
+      <Filter>Source Files\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearTraces\ClearPIDcache.cpp">
+      <Filter>Source Files\ClearTraces</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\CoreFunctions.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Memory\MemoryFunctions.h">
+      <Filter>Source Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearTraces\ClearPIDcache.h">
+      <Filter>Source Files\ClearTraces</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\CoreFunctions.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="driver.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionsDef.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeStructs.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
